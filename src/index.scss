@@ -35,31 +35,7 @@ body {
   padding: 0;
   position: relative;
   min-height: 100vh;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    z-index: -1; // Ensure it is behind the content
-    background-size: contain;
-  }
-
-  &::before {
-    background-image: url("./assets/gradient-pink.svg");
-    background-position: top right;
-    top: 0;
-  }
-
-  &::after {
-    background-image: url("./assets/gradient-teal.svg");
-    background-position: bottom left;
-    bottom: -143px;
-    position: fixed;
-    right: 18px;
-  }
+  background: linear-gradient(to bottom left, #efd0de 0%, white 30%, white 60%, #bfe6e8 112%);
 }
 
 .container {
