@@ -1,0 +1,104 @@
+.container {
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-gray-1);
+  padding: 32px 16px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &.open {
+    display: block;
+  }
+}
+
+.closeButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.suggestionList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 8px;
+  z-index: 1;
+  overflow: hidden;
+  border: 1px solid var(--light-gray-1);
+}
+
+.suggestionItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover,
+  &.active {
+    background-color: var(--light-gray-1);
+  }
+}
+
+.suggestionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.suggestionName {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+
+.suggestionDescription {
+  font-size: 12px;
+  color: var(--dark-gray-2);
+}
+
+.nothingFound {
+  color: var(--medium-gray-2);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  padding: 8px;
+}
+
+@media (max-width: 768px) {
+  .suggestionList {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 80px);
+    box-sizing: border-box;
+    background: transparent;
+    overflow-y: auto;
+  }
+}

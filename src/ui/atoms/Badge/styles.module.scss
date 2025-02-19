@@ -1,0 +1,11 @@
+.container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 42px;
+  background-color: var(--light-gray-2);
+  color: var(--dark-gray-1);
+  font-size: 12px;
+  font-weight: 600;
+}

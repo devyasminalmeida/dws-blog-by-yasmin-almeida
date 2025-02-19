@@ -1,0 +1,47 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border: 1px solid var(--light-gray-2);
+  transition: background-color 0.3s ease;
+
+  &.scrolled {
+    background-color: var(--light-gray-1);
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    max-width: 1366px;
+    margin: 0 auto;
+
+    .logo {
+      gap: 10px;
+
+      a {
+        display: flex;
+        gap: 10px;
+        text-decoration: none;
+        align-items: baseline;
+        color: unset;
+
+        span {
+          font-size: 13px;
+          font-weight: 400;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .autocomplete {
+      width: 520px;
+
+      @media (max-width: 768px) {
+        width: auto;
+      }
+    }
+  }
+}

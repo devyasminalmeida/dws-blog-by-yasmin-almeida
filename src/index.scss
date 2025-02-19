@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+:root {
+  --dark-navy: #020318;
+  --midnight-blue: #060725;
+  --dark-indigo: #0b0e3a;
+
+  --primary-teal: #00bfc1;
+  --secondary-teal: #009598;
+  --dark-teal: #006c6e;
+
+  --primary-pink: #ef4c84;
+  --secondary-pink: #d31450;
+  --dark-pink: #8c1038;
+
+  --primary-blue: #5b7bc1;
+  --secondary-blue: #3559aa;
+  --dark-blue: #2c498a;
+
+  --light-gray-1: #f0f0f2;
+  --light-gray-2: #e0e2e6;
+  --light-gray-3: #c0c2c8;
+  --medium-gray-1: #9ea0a5;
+  --medium-gray-2: #7f8185;
+  --dark-gray-1: #5e5f63;
+  --dark-gray-2: #202122;
+
+  --sidebar-width: 300px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--light-gray-1);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    z-index: -1; // Ensure it is behind the content
+    background-size: contain;
+  }
+
+  &::before {
+    background-image: url("./assets/gradient-pink.svg");
+    background-position: top right;
+    top: 0;
+  }
+
+  &::after {
+    background-image: url("./assets/gradient-teal.svg");
+    background-position: bottom left;
+    bottom: -143px;
+    position: fixed;
+    right: 18px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 1366px;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding-left: 24px;
+  margin-left: var(--sidebar-width);
+}
+
+aside {
+  position: relative;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-left: 0;
+    margin-left: 0;
+  }
+}

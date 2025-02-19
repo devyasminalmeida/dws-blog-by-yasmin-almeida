@@ -1,0 +1,48 @@
+.button {
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 12px 16px;
+  transition: all 0.3s ease-in-out;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  &.ghost {
+    background-color: transparent;
+    border: 1px solid var(--secondary-pink);
+    border-radius: 54px;
+    color: var(--secondary-pink);
+    font-weight: 700;
+
+    &:hover {
+      color: var(--dark-pink);
+      border: 1px solid var(--dark-pink);
+    }
+  }
+
+  &.primary {
+    background-color: var(--secondary-pink);
+    border: 1px solid var(--secondary-pink);
+    color: var(--light-gray-1);
+    border-radius: 42px;
+
+    &:hover {
+      background-color: var(--dark-pink);
+      border: 1px solid var(--dark-pink);
+    }
+  }
+
+  &.link {
+    background-color: transparent;
+    border: none;
+    color: var(--secondary-pink);
+
+    &:hover {
+      background-color: transparent;
+      border: none;
+      color: var(--dark-pink);
+    }
+  }
+}
